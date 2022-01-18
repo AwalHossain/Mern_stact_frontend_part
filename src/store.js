@@ -4,10 +4,13 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import {
   productsDetailsReducer,
   productsReducer,
+  use,
 } from "./reducers/productReducer";
+import { userReducer } from "./reducers/userReducer";
 const reducer = combineReducers({
   products: productsReducer,
   productDetails: productsDetailsReducer,
+  user: userReducer,
 });
 
 let initialState = {};
